@@ -31,7 +31,7 @@ public class TaskEntity {
     private Boolean status;
     
     @ManyToOne()
-    @JoinColumn(name = "user_id", insertable = false, updatable = false)
+    @JoinColumn(name = "usuario_id") // Removidos insertable = false, updatable = false
     private UserEntity userEntity;
 
     @CreationTimestamp

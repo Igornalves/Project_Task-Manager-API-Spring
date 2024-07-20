@@ -16,7 +16,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
-@Entity(name = "user")
+@Entity(name = "usuario")
 @Data
 public class UserEntity {
     
@@ -36,7 +36,7 @@ public class UserEntity {
     @Length(min = 10, max = 100, message = "A senha deve conter entre (10) e (100) caracteres")
     private String password;
 
-    @OneToMany(mappedBy = "TaskEntity", cascade = CascadeType.ALL)
-    private List<TaskEntity> tasks_users;
+    @OneToMany(mappedBy = "userEntity", cascade = CascadeType.ALL)
+    private List<TaskEntity> tasksUsers;
 
 }

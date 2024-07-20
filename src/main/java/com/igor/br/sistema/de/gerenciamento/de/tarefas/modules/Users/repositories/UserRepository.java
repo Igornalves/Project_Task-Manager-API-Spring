@@ -9,4 +9,5 @@ import com.igor.br.sistema.de.gerenciamento.de.tarefas.modules.Users.entities.Us
 
 public interface UserRepository extends JpaRepository<UserEntity,UUID> {
     Optional<UserEntity> findByUsernameOrEmail(String username, String email);
+    Optional<UserEntity> findById(UUID id);
 }
