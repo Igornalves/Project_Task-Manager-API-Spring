@@ -23,11 +23,11 @@ import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 
-
-
 @RestController
 @RequestMapping("/user")
 public class UserController {
+
+    // controle de rotas nos quais chamaram os servicos da aplicacao e suas regras de negocios
 
     @Autowired
     private UserService userService;

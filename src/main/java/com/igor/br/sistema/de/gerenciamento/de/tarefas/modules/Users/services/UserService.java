@@ -1,6 +1,5 @@
 package com.igor.br.sistema.de.gerenciamento.de.tarefas.modules.Users.services;
 
-
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,10 +11,11 @@ import com.igor.br.sistema.de.gerenciamento.de.tarefas.exceptions.UserNotFoundEx
 import com.igor.br.sistema.de.gerenciamento.de.tarefas.modules.Users.entities.UserEntity;
 import com.igor.br.sistema.de.gerenciamento.de.tarefas.modules.Users.repositories.UserRepository;
 
-
 @Service
 public class UserService {
     
+    // regras de negocio da aplicacao e operacoes na aplicacao 
+
     @Autowired
     private UserRepository userRepository;
 

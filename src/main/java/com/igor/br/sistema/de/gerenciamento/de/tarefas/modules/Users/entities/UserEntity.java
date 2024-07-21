@@ -19,6 +19,8 @@ import lombok.Data;
 @Entity(name = "usuario")
 @Data
 public class UserEntity {
+
+    // Tabela existente no banco de dados da aplicacao com todos os metadados dela
     
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)

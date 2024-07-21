@@ -13,7 +13,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Entity(name="Tarefas")
@@ -27,7 +27,7 @@ public class TaskEntity {
     private String titulo;
     private String descricao;
 
-    @NotBlank(message = "Campo é obrigatorio !!!!")
+    @NotNull(message = "Campo é obrigatorio !!!!")
     private Boolean status;
     
     @ManyToOne()
