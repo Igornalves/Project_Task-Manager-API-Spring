@@ -1,6 +1,6 @@
 # Projeto de Sistema de gerencimento de Tarefas 
 
-Este projeto é um sistema de gerenciamento de tarefas projetado para ajudar indivíduos a organizar, acompanhar e concluir tarefas de forma eficiente. A aplicação permite a criação, edição e exclusão de tarefas, além de fornecer funcionalidades para o gerenciamento de usuários e a atribuição de tarefas de forma diferente a cada usuario.
+Este projeto é um sistema de gerenciamento de tarefas projetado para ajudar indivíduos a ***organizar, acompanhar e concluir tarefas*** de forma eficiente. A aplicação permite a ***criação, edição e exclusão de tarefas***, além de fornecer funcionalidades para o gerenciamento de usuários e a atribuição de tarefas de forma diferente a cada usuario.
 
 ## Principais Tecnologias Utilizadas
 
@@ -8,23 +8,23 @@ Este projeto é um sistema de gerenciamento de tarefas projetado para ajudar ind
 
 <div style="display: inline_block" align="center">
 
-<img  alt="React-Native" width="120" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg">
-<img  alt="React-Native" width="120" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/hibernate/hibernate-original.svg
+<img  alt="Spring" width="120" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg">
+<img  alt="hibernate" width="120" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/hibernate/hibernate-original.svg
 ">
-<img  alt="React-Native" width="120" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg">
-<img  alt="React-Native" width="120" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postman/postman-original.svg">
+<img  alt="PostgreSQL" width="120" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg">
+<img  alt="Postman" width="120" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postman/postman-original.svg">
 
 </div>
 
 <br>
 
-- Fremework: Spring-Boot 
+- ***Fremework:*** Spring-Boot 
 
-- Banco de Dados: PostgreSQL 
+- ***Banco de Dados:*** PostgreSQL 
 
-- ORM: Hibernate
+- ***ORM:*** Hibernate
 
-- Teste De Rotas: Postman 
+- ***Teste De Rotas:*** Postman 
 
 ## Funcionalidades Principais
 
