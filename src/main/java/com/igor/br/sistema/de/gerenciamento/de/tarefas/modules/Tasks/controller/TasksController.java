@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 @RequestMapping("/tasks")
 public class TasksController {
 
+    // permite fazer injecao de dependencia no spring criando para vc o construtor ja resolvido para vc 
     @Autowired
     private TasksService tasksService;
     
