@@ -2,21 +2,29 @@
 
 Este projeto é um sistema de gerenciamento de tarefas projetado para ajudar indivíduos a ***organizar, acompanhar e concluir tarefas*** de forma eficiente. A aplicação permite a ***criação, edição e exclusão de tarefas***, além de fornecer funcionalidades para o gerenciamento de usuários e a atribuição de tarefas de forma diferente a cada usuario.
 
-## Principais Tecnologias Utilizadas
+## Índice
+
+- [Tecnologias e Ferramentas Utilizadas](#tecnologias-e-ferramentas-utilizadas)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Pré-requisitos](#pré-requisitos)
+- [Instalação e Configuração](#instalação-e-configuração)
+- [Execução do Projeto](#execução-do-projeto)
+
+## Tecnologias e Ferramentas Utilizadas
 
 <br>
-
 <div style="display: inline_block" align="center">
 
-<img  alt="Spring" width="120" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg">
-<img  alt="hibernate" width="120" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/hibernate/hibernate-original.svg
-">
-<img  alt="PostgreSQL" width="120" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg">
-<img  alt="Postman" width="120" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postman/postman-original.svg">
+<img width="100" src="https://skillicons.dev/icons?i=java">
+<img width="100" src="https://skillicons.dev/icons?i=spring">
+<img width="100" alt="Spring" width="120" src="https://skillicons.dev/icons?i=hibernate">
+<img width="100" src="https://skillicons.dev/icons?i=postgres">
+<img width="100" src="https://skillicons.dev/icons?i=postman">
 
 </div>
-
 <br>
+
+- ***Linguagem:*** Java
 
 - ***Fremework:*** Spring-Boot 
 
@@ -26,143 +34,114 @@ Este projeto é um sistema de gerenciamento de tarefas projetado para ajudar ind
 
 - ***Teste De Rotas:*** Postman 
 
-## Funcionalidades Principais
+## Estrutura do Projeto
 
-- Cadastro de Usuários
+## Pré-requisitos
 
-- Atualizacao de campos do Usuario
+é necessário garantir que seu ambiente de desenvolvimento esteja configurado adequadamente. Aqui estão os principais pré-requisitos:
 
-- Deletar Usuario 
+<br>
+<div style="display: inline_block" align="center">
 
-- Buscar por usuario 
+<img width="100" src="https://skillicons.dev/icons?i=java">
+<img width="100" src="https://skillicons.dev/icons?i=maven">
+<img width="100" src="https://skillicons.dev/icons?i=gradle">
+<img width="100" src="https://skillicons.dev/icons?i=mysql">
 
-- Gerenciamento de Tarefas
+</div>
+<br>
 
-- Exclusão de tarefas 
+- Java Development Kit (JDK): ***versão 8*** ou superior como a ***JDK 11*** recomendada pela documentacao
 
-- Status da Tarefa 
+- Maven ou Gradle: ferramentas de ***build*** para gerenciar ***dependências*** e criar artefatos da aplicação.
 
-- Atualizacao da Tarefa
+- Banco de Dados (SQL or NoSQL): Certifique-se de que o ***PostgreSQL*** ou outros se ja estam instalados e configurados corretamente.
 
-## Principais Rotas da API CRUD desenvolvida 
+#### IDE (Ambiente de Desenvolvimento Integrado):
 
-### Porta que roda a Aplicacao 
+<br>
+<div style="display: inline_block" align="center">
 
-```
-localhost:8080
-```
+<img width="100" src="https://skillicons.dev/icons?i=vscode">
+<img width="100" src="https://skillicons.dev/icons?i=eclipse">
+<img width="100" src="https://skillicons.dev/icons?i=idea">
 
-### Rota para Criacao de Usuario 
-```
-localhost:8080/user/criarUsuario
-```
+</div>
+<br>
 
-#### Body da requisicao (Exemplo)
-```Json
-{
-    "name":"wanderson",
-    "username":"coisado da TI",
-    "email":"wandersondati90@gmail.com",
-    "password":"wandersonTI9012"
-}
-```
+ - ***IntelliJ IDEA*** (com o plugin Spring Boot integrado).
+ - ***Eclipse*** (com o plugin Spring Tools Suite - STS).
+ - ***VS Code*** (com extensões para Java e Spring Boot)
 
-### Rota de Verificacao de Usuario 
 
-```
-localhost:8080/user/verificandoUsuario/{id}
-```
+## Instalação e Configuração
 
-### Rota para Atualizacao Todos os Campos do Usuario 
+1. **Clone o repositório**:
+    ```bash
+    git clone https://github.com/Igornalves/Projeto_Gerenciador-de-Tarefas-Spring
+    ```
+2. **Configuração do banco de dados**:
 
-```
-localhost:8080/user/atualizacacaoDeUsuarioCompleto/{id}
-```
+    - Crie um banco de dados PostgreSQL ou outros.
+    - Configure as credenciais de acesso ao banco no arquivo application.properties ou application.yml
 
-#### Body da Requisicao (Exemplo)
+        ```bash
+        spring.datasource.url=jdbc:postgresql://localhost:5432/nome_do_banco
+        spring.datasource.username=seu_usuario
+        spring.datasource.password=sua_senha
+        spring.jpa.hibernate.ddl-auto=update
+        ```
 
-```Json
-{
-    "name":"wanderson",
-    "username":"programador de backend da gringa",
-    "email":"wandersondati901@gmail.com",
-    "password":"Wandersonback9012"
-}
-```
+3. **Instalação das dependências**:
 
-### Rota Atualizacao dos Campos Especificos Do Usuario
+    - Se estiver usando Maven:
 
-```
-localhost:8080/user/atualizarCamposEspecificosDoUsuario/{id}/{campo}
-```
+        ```bash
+        mvn clean install
+        ```
 
-#### Body da Requisicao (Exemplo)
-```Text
-wanderson
-```
+    - Se estiver usando Gradle:
 
-OBS:. esta requisicao nao pode ser enviada no formato Text e sem espacos para poder voltar o response 200 ok 
+        ```bash
+        gradle build
+        ```
 
-### Rota Para deletar o Usuario
+## Execução do Projeto
 
-```
-localhost:8080/user/deletandoUsuario/{id}
-```
+1. **Rodando a aplicação:**
 
-### Rota para Criar Tasks 
+    - Se estiver usando Maven:
 
-```
-localhost:8080/tasks/criandoTask/{id_user}
-```
+        ```bash
+        mvn spring-boot:run
+        ```
 
-#### Body da Requisicao (Exemplo)
+    - Se estiver usando Gradle:
 
-```json
-{
-    "titulo": "API de login para lojas ",
-    "descricao": "as verificacao do usuarios",
-    "status": false
-}
-```
+        ```bash
+        gradle bootRun
+        ```
 
-### Rota para deletar Task 
+2. **Acessando a aplicação:**
 
-```
-localhost:8080/tasks/deletandoTask/{id}
-```
+    <br>
+    <div style="display: inline_block" align="center">
 
-### Rota para Listagem de Task 
+    <img width="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/chrome/chrome-original.svg" />
 
-``` 
-localhost:8080/tasks/listaDeTarefas
-```
+    </div>
+    <br>
 
-### Rota para Atualizando Tarefas completa
+    - A aplicação estará rodando em ```http://localhost:8080``` por padrão, OBS :. veeja see na aplicacao nao ah alguma alteracao de porta padrao a ser rodada na aplicacao.
 
-```
-localhost:8080/tasks/atualizandoTarefaCompleta/{id}
-```
+3. **Testando as rotas da API:**
 
-#### Body da Requisicao (Exemplo)
+    <br>
+    <div style="display: inline_block" align="center">
 
-```Json
-{
-    "titulo": "API para pizzaria",
-    "descricao": "usando a Tecnologia React Native e python",
-    "status": true
-}
-```
+    <img width="100" src="https://skillicons.dev/icons?i=postman">
 
-### Rota de Atualizando Campo Especifico Da Tarefa
+    </div>
+    <br>
 
-```
-localhost:8080/tasks/atualizarCampoEspecificoDaTarefa/{campo}/{id}
-```
-
-#### Body da Requisicao (Exemplo)
-
-```
-false
-```
-
-OBS:. esta requisicao nao pode ser enviada no formato Text e sem espacos para poder voltar o response 200 ok 
+    - Utilize o Postman para testar as requisições como GET, POST, PUT e DELETE.
