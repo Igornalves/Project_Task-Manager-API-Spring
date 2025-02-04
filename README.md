@@ -1,16 +1,16 @@
-# Projeto de Sistema de gerencimento de Tarefas 
+# Task Management System Project
 
-Este projeto é um sistema de gerenciamento de tarefas projetado para ajudar indivíduos a ***organizar, acompanhar e concluir tarefas*** de forma eficiente. A aplicação permite a ***criação, edição e exclusão de tarefas***, além de fornecer funcionalidades para o gerenciamento de usuários e a atribuição de tarefas de forma diferente a cada usuario.
+This project is a task management system designed to help individuals ***organize, track, and complete tasks*** efficiently. The application allows for ***creating, editing, and deleting tasks***, as well as providing functionality for managing users and assigning tasks differently to each user.
 
-## Índice
+## Index
 
-- [Tecnologias e Ferramentas Utilizadas](#tecnologias-e-ferramentas-utilizadas)
-- [Estrutura do Projeto](#estrutura-do-projeto)
-- [Pré-requisitos](#pré-requisitos)
-- [Instalação e Configuração](#instalação-e-configuração)
-- [Execução do Projeto](#execução-do-projeto)
+- [Technologies and Tools Used](#technologies-and-tools-used)
+- [Project Structure](#project-structure)
+- [Prerequisites](#prerequisites)
+- [Installation and Configuration](#installation-and-configuration)
+- [Project Execution](#project-execution)
 
-## Tecnologias e Ferramentas Utilizadas
+## Technologies and Tools Used
 
 <br>
 <div style="display: inline_block" align="center">
@@ -24,21 +24,21 @@ Este projeto é um sistema de gerenciamento de tarefas projetado para ajudar ind
 </div>
 <br>
 
-- ***Linguagem:*** Java
+- ***Language:*** Java
 
-- ***Fremework:*** Spring-Boot 
+- ***Fremework:*** Spring-Boot
 
-- ***Banco de Dados:*** PostgreSQL 
+- ***Database:*** PostgreSQL
 
 - ***ORM:*** Hibernate
 
-- ***Teste De Rotas:*** Postman 
+- ***Route Testing:*** Postman
 
-## Estrutura do Projeto
+## Project Structure
 
-## Pré-requisitos
+## Prerequisites
 
-é necessário garantir que seu ambiente de desenvolvimento esteja configurado adequadamente. Aqui estão os principais pré-requisitos:
+You need to ensure that your development environment is properly configured. Here are the main prerequisites:
 
 <br>
 <div style="display: inline_block" align="center">
@@ -51,13 +51,13 @@ Este projeto é um sistema de gerenciamento de tarefas projetado para ajudar ind
 </div>
 <br>
 
-- Java Development Kit (JDK): ***versão 8*** ou superior como a ***JDK 11*** recomendada pela documentacao
+- Java Development Kit (JDK): ***version 8*** or higher as ***JDK 11*** recommended by the documentation
 
-- Maven ou Gradle: ferramentas de ***build*** para gerenciar ***dependências*** e criar artefatos da aplicação.
+- Maven or Gradle: ***build*** tools to manage ***dependencies*** and create application artifacts.
 
-- Banco de Dados (SQL or NoSQL): Certifique-se de que o ***PostgreSQL*** ou outros se ja estam instalados e configurados corretamente.
+- Database (SQL or NoSQL): Make sure that ***PostgreSQL*** or others are already installed and configured correctly.
 
-#### IDE (Ambiente de Desenvolvimento Integrado):
+#### IDE (Integrated Development Environment):
 
 <br>
 <div style="display: inline_block" align="center">
@@ -69,79 +69,77 @@ Este projeto é um sistema de gerenciamento de tarefas projetado para ajudar ind
 </div>
 <br>
 
- - ***IntelliJ IDEA*** (com o plugin Spring Boot integrado).
- - ***Eclipse*** (com o plugin Spring Tools Suite - STS).
- - ***VS Code*** (com extensões para Java e Spring Boot)
+- ***IntelliJ IDEA*** (with the Spring Boot plugin integrated).
+- ***Eclipse*** (with the Spring Tools Suite - STS plugin).
+- ***VS Code*** (with extensions for Java and Spring Boot)
 
+## Installation and Configuration
 
-## Instalação e Configuração
+1. **Clone the repository**:
+```bash
+git clone https://github.com/Igornalves/Projeto_Gerenciador-de-Tarefas-Spring
+```
+2. **Database configuration**:
 
-1. **Clone o repositório**:
-    ```bash
-    git clone https://github.com/Igornalves/Projeto_Gerenciador-de-Tarefas-Spring
-    ```
-2. **Configuração do banco de dados**:
+- Create a PostgreSQL or other database. - Configure the database access credentials in the application.properties or application.yml file
 
-    - Crie um banco de dados PostgreSQL ou outros.
-    - Configure as credenciais de acesso ao banco no arquivo application.properties ou application.yml
+```bash
+spring.datasource.url=jdbc:postgresql://localhost:5432/database_name
+spring.datasource.username=your_username
+spring.datasource.password=your_password
+spring.jpa.hibernate.ddl-auto=update
+```
 
-        ```bash
-        spring.datasource.url=jdbc:postgresql://localhost:5432/nome_do_banco
-        spring.datasource.username=seu_usuario
-        spring.datasource.password=sua_senha
-        spring.jpa.hibernate.ddl-auto=update
-        ```
+3. **Installing the dependencies**:
 
-3. **Instalação das dependências**:
+- If you are using Maven:
 
-    - Se estiver usando Maven:
+```bash
+mvn clean install
+```
 
-        ```bash
-        mvn clean install
-        ```
+- If you are using Gradle:
 
-    - Se estiver usando Gradle:
+```bash
+gradle build
+```
 
-        ```bash
-        gradle build
-        ```
+## Project Execution
 
-## Execução do Projeto
+1. **Running the application:**
 
-1. **Rodando a aplicação:**
+- If you are using Maven:
 
-    - Se estiver usando Maven:
+```bash
+mvn spring-boot:run
+```
 
-        ```bash
-        mvn spring-boot:run
-        ```
+- If you are using Gradle:
 
-    - Se estiver usando Gradle:
+```bash
+gradle bootRun
+```
 
-        ```bash
-        gradle bootRun
-        ```
+2. **Accessing the application:**
 
-2. **Acessando a aplicação:**
+<br>
+<div style="display: inline_block" align="center">
 
-    <br>
-    <div style="display: inline_block" align="center">
+<img width="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/chrome/chrome-original.svg" />
 
-    <img width="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/chrome/chrome-original.svg" />
+</div>
+<br>
 
-    </div>
-    <br>
+- The application will be running at ```http://localhost:8080``` by default, NOTE:. check if there is any change in the default port to be run in the application.
 
-    - A aplicação estará rodando em ```http://localhost:8080``` por padrão, OBS :. veeja see na aplicacao nao ah alguma alteracao de porta padrao a ser rodada na aplicacao.
+3. **Testing API routes:**
 
-3. **Testando as rotas da API:**
+<br>
+<div style="display: inline_block" align="center">
 
-    <br>
-    <div style="display: inline_block" align="center">
+<img width="100" src="https://skillicons.dev/icons?i=postman">
 
-    <img width="100" src="https://skillicons.dev/icons?i=postman">
+</div>
+<br>
 
-    </div>
-    <br>
-
-    - Utilize o Postman para testar as requisições como GET, POST, PUT e DELETE.
+- Use Postman to test requests such as GET, POST, PUT and DELETE.
